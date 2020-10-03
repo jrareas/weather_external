@@ -492,8 +492,6 @@ F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 5300 6700 50  0001
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 6150 5150 6150
-Wire Wire Line
 	5150 6750 5600 6750
 Wire Wire Line
 	6400 6750 6400 5250
@@ -631,12 +629,12 @@ Wire Wire Line
 Wire Wire Line
 	4250 6050 6500 6050
 $Comp
-L Device:C C?
+L Device:C C6
 U 1 1 5F852F52
 P 2600 6050
-F 0 "C?" V 2852 6050 50  0000 C CNN
+F 0 "C6" V 2852 6050 50  0000 C CNN
 F 1 "C" V 2761 6050 50  0000 C CNN
-F 2 "" H 2638 5900 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2638 5900 50  0001 C CNN
 F 3 "~" H 2600 6050 50  0001 C CNN
 	1    2600 6050
 	0    -1   -1   0   
@@ -655,4 +653,27 @@ Wire Wire Line
 Connection ~ 2350 6400
 Wire Wire Line
 	2350 6400 2500 6400
+$Comp
+L Device:C C7
+U 1 1 5F877CE5
+P 4250 6450
+F 0 "C7" H 4365 6496 50  0000 L CNN
+F 1 "C" H 4365 6405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4288 6300 50  0001 C CNN
+F 3 "~" H 4250 6450 50  0001 C CNN
+	1    4250 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 6150 4250 6300
+Wire Wire Line
+	4250 6150 5150 6150
+Connection ~ 5150 6150
+Wire Wire Line
+	5150 6150 6050 6150
+Wire Wire Line
+	4250 6600 4250 6750
+Wire Wire Line
+	4250 6750 5150 6750
+Connection ~ 5150 6750
 $EndSCHEMATC

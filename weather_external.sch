@@ -492,10 +492,6 @@ F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 5300 6700 50  0001
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 4250 6050 4250
-Wire Wire Line
-	6050 6150 5150 6150
-Wire Wire Line
 	5150 6750 5600 6750
 Wire Wire Line
 	6400 6750 6400 5250
@@ -509,33 +505,12 @@ Wire Wire Line
 Wire Wire Line
 	6200 5000 6400 5000
 Wire Wire Line
-	6400 5000 6400 4450
-Wire Wire Line
-	6400 4450 5650 4450
-$Comp
-L Regulator_Linear:MCP1700-3302E_SOT23 U4
-U 1 1 5FA77092
-P 4250 6400
-F 0 "U4" V 4296 6505 50  0000 L CNN
-F 1 "MCP1700-3302E_SOT23" V 4205 6505 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4250 6625 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 4250 6400 50  0001 C CNN
-	1    4250 6400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	4550 6400 4550 6800
-Wire Wire Line
 	5600 7000 5600 6750
 Wire Wire Line
 	3900 5900 5450 5900
 Connection ~ 5600 6750
 Wire Wire Line
 	5600 6750 6400 6750
-Wire Wire Line
-	4250 6700 4750 6700
-Wire Wire Line
-	4750 6700 4750 6050
 Wire Wire Line
 	4850 4150 4700 4150
 Wire Wire Line
@@ -584,8 +559,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 6800 2250 6400
 Wire Wire Line
-	2250 6400 2500 6400
-Connection ~ 4550 6800
+	2250 6400 2350 6400
 Wire Wire Line
 	4550 6800 4550 7000
 Wire Wire Line
@@ -601,7 +575,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 6600 3000 6600
 Wire Wire Line
-	3000 6100 4250 6100
+	3000 6100 3100 6100
 Wire Wire Line
 	3350 5300 3350 6600
 Wire Wire Line
@@ -632,18 +606,74 @@ Wire Wire Line
 Wire Wire Line
 	7450 4050 5850 4050
 Wire Wire Line
-	5850 4050 5850 4350
-Wire Wire Line
-	5850 4350 5650 4350
-Wire Wire Line
 	4550 7000 5600 7000
-Wire Wire Line
-	6050 4250 6050 6150
-Wire Wire Line
-	4750 6050 6500 6050
 Wire Wire Line
 	6500 6050 6500 3500
 Connection ~ 6500 3500
 Wire Wire Line
 	6500 3500 5350 3500
+Wire Wire Line
+	5850 4550 5650 4550
+Wire Wire Line
+	5850 4050 5850 4550
+Wire Wire Line
+	6050 4150 5650 4150
+Wire Wire Line
+	6050 4150 6050 6150
+Wire Wire Line
+	6400 5000 6400 4250
+Wire Wire Line
+	6400 4250 5650 4250
+Wire Wire Line
+	4250 6050 4250 6100
+Wire Wire Line
+	4250 6050 6500 6050
+$Comp
+L Device:C C?
+U 1 1 5F852F52
+P 2600 6050
+F 0 "C?" V 2852 6050 50  0000 C CNN
+F 1 "C" V 2761 6050 50  0000 C CNN
+F 2 "" H 2638 5900 50  0001 C CNN
+F 3 "~" H 2600 6050 50  0001 C CNN
+	1    2600 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3100 6100 3100 6050
+Wire Wire Line
+	3100 6050 2750 6050
+Connection ~ 3100 6100
+Wire Wire Line
+	3100 6100 4250 6100
+Wire Wire Line
+	2450 6050 2350 6050
+Wire Wire Line
+	2350 6050 2350 6400
+Connection ~ 2350 6400
+Wire Wire Line
+	2350 6400 2500 6400
+$Comp
+L Device:C C?
+U 1 1 5F877CE5
+P 4250 6450
+F 0 "C?" H 4365 6496 50  0000 L CNN
+F 1 "C" H 4365 6405 50  0000 L CNN
+F 2 "" H 4288 6300 50  0001 C CNN
+F 3 "~" H 4250 6450 50  0001 C CNN
+	1    4250 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 6150 4250 6300
+Wire Wire Line
+	4250 6150 5150 6150
+Connection ~ 5150 6150
+Wire Wire Line
+	5150 6150 6050 6150
+Wire Wire Line
+	4250 6600 4250 6750
+Wire Wire Line
+	4250 6750 5150 6750
+Connection ~ 5150 6750
 $EndSCHEMATC
