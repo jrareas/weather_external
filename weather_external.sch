@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Atmega328 + 555"
+Title "Weather External"
 Date ""
-Rev "V1.2"
+Rev "V1.0"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -492,10 +492,6 @@ F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 5300 6700 50  0001
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 4250 6050 4250
-Wire Wire Line
-	6050 6150 5150 6150
-Wire Wire Line
 	5150 6750 5600 6750
 Wire Wire Line
 	6400 6750 6400 5250
@@ -503,15 +499,9 @@ Connection ~ 6400 5250
 Wire Wire Line
 	6400 5250 5950 5250
 Wire Wire Line
-	5450 6450 6200 6450
-Wire Wire Line
 	6200 6450 6200 5000
 Wire Wire Line
 	6200 5000 6400 5000
-Wire Wire Line
-	6400 5000 6400 4450
-Wire Wire Line
-	6400 4450 5650 4450
 $Comp
 L Regulator_Linear:MCP1700-3302E_SOT23 U4
 U 1 1 5FA77092
@@ -530,8 +520,6 @@ Wire Wire Line
 Wire Wire Line
 	3900 5900 5450 5900
 Connection ~ 5600 6750
-Wire Wire Line
-	5600 6750 6400 6750
 Wire Wire Line
 	4250 6700 4750 6700
 Wire Wire Line
@@ -580,11 +568,9 @@ $EndComp
 Wire Wire Line
 	3000 6100 3000 6400
 Wire Wire Line
-	4550 6800 2250 6800
-Wire Wire Line
 	2250 6800 2250 6400
 Wire Wire Line
-	2250 6400 2500 6400
+	2250 6400 2400 6400
 Connection ~ 4550 6800
 Wire Wire Line
 	4550 6800 4550 7000
@@ -601,7 +587,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 6600 3000 6600
 Wire Wire Line
-	3000 6100 4250 6100
+	3000 6100 3200 6100
 Wire Wire Line
 	3350 5300 3350 6600
 Wire Wire Line
@@ -632,13 +618,7 @@ Wire Wire Line
 Wire Wire Line
 	7450 4050 5850 4050
 Wire Wire Line
-	5850 4050 5850 4350
-Wire Wire Line
-	5850 4350 5650 4350
-Wire Wire Line
 	4550 7000 5600 7000
-Wire Wire Line
-	6050 4250 6050 6150
 Wire Wire Line
 	4750 6050 6500 6050
 Wire Wire Line
@@ -646,4 +626,103 @@ Wire Wire Line
 Connection ~ 6500 3500
 Wire Wire Line
 	6500 3500 5350 3500
+$Comp
+L Device:C C6
+U 1 1 5F797F7B
+P 2750 5900
+F 0 "C6" H 2865 5946 50  0000 L CNN
+F 1 "C" H 2865 5855 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2788 5750 50  0001 C CNN
+F 3 "~" H 2750 5900 50  0001 C CNN
+	1    2750 5900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 5900 3200 5900
+Wire Wire Line
+	3200 5900 3200 6100
+Connection ~ 3200 6100
+Wire Wire Line
+	3200 6100 3900 6100
+Wire Wire Line
+	2600 5900 2400 5900
+Wire Wire Line
+	2400 5900 2400 6400
+Connection ~ 2400 6400
+Wire Wire Line
+	2400 6400 2500 6400
+$Comp
+L Device:C C7
+U 1 1 5F7AF8C9
+P 5400 7250
+F 0 "C7" H 5515 7296 50  0000 L CNN
+F 1 "C" H 5515 7205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5438 7100 50  0001 C CNN
+F 3 "~" H 5400 7250 50  0001 C CNN
+	1    5400 7250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 7250 5550 7250
+Wire Wire Line
+	6050 6150 5150 6150
+Wire Wire Line
+	5250 7250 5250 6850
+Wire Wire Line
+	5250 6850 4850 6850
+Wire Wire Line
+	4850 6850 4850 6150
+Wire Wire Line
+	4850 6150 5150 6150
+Connection ~ 5150 6150
+Wire Wire Line
+	5850 4050 5850 4550
+Wire Wire Line
+	5850 4550 5650 4550
+Wire Wire Line
+	6400 4350 5800 4350
+Wire Wire Line
+	5800 4350 5800 4250
+Wire Wire Line
+	5800 4250 5650 4250
+Wire Wire Line
+	6400 4350 6400 5000
+Wire Wire Line
+	6050 4150 5650 4150
+Wire Wire Line
+	6050 4150 6050 6150
+Wire Wire Line
+	5450 6450 6200 6450
+Wire Wire Line
+	5700 7250 5700 6750
+Wire Wire Line
+	5600 6750 5700 6750
+Connection ~ 5700 6750
+Wire Wire Line
+	5700 6750 6400 6750
+$Comp
+L Device:Jumper JP1
+U 1 1 5F87AC41
+P 3900 6450
+F 0 "JP1" V 3946 6362 50  0000 R CNN
+F 1 "Jumper" V 3855 6362 50  0000 R CNN
+F 2 "SolderJumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 3900 6450 50  0001 C CNN
+F 3 "~" H 3900 6450 50  0001 C CNN
+	1    3900 6450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4250 6700 4050 6700
+Wire Wire Line
+	4050 6700 4050 6750
+Wire Wire Line
+	4050 6750 3900 6750
+Wire Wire Line
+	2250 6800 4550 6800
+Connection ~ 4250 6700
+Wire Wire Line
+	3900 6150 3900 6100
+Connection ~ 3900 6100
+Wire Wire Line
+	3900 6100 4250 6100
 $EndSCHEMATC
